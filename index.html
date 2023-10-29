@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reactor.css">
+    <link rel="stylesheet" href="css/solar-system.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Современный Интерфейс</title>
+</head>
+
+<body>
+    <div class="reactor">
+        <div class="circle-1"><span></span><span></span><span></span><span></span></div>
+        <div class="circle-2">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="circle-3"></div>
+        <div class="circle-4"><span></span><span></span><span></span></div>
+        <div class="circle-5"><span></span><span></span><span></span></div>
+        <div class="circle-6"></div>
+        <div class="circle-7"></div>
+        <div class="circle-8"><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="datetime-container">
+        <div class="current-datetime">
+            <div class="current-time" id="currentTime">21:42</div>
+            <div class="current-date" id="currentDate">вс, 29 октября</div>
+        </div>
+        <div class="solarSystemContainer">
+            <div class="solarSystem">
+                <article class="solarSystem__sun"></article>
+                <section class="solarSystem__mercuryTrajectory">
+                    <article class="solarSystem__mercuryTrajectory__mercury"></article>
+                </section>
+                <section class="solarSystem__venusTrajectory">
+                    <article class="solarSystem__venusTrajectory__venus"></article>
+                </section>
+                <section class="solarSystem__earthTrajectory">
+                    <article class="solarSystem__earthTrajectory__earth"></article>
+                </section>
+                <section class="solarSystem__marsTrajectory">
+                    <article class="solarSystem__marsTrajectory__mars"></article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
