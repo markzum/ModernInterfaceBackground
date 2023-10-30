@@ -35,7 +35,7 @@
 
   --color-background: #031d35;
   --color-1: rgb(37, 150, 190); /* rgba(99, 193, 223, 0.8) */
-  --color-2: rgb(48,169,199); /* rgba(105, 241, 241, 0.8) */
+  --color-2: rgb(48, 169, 199); /* rgba(105, 241, 241, 0.8) */
 }
 
 
@@ -57,7 +57,7 @@
 
 .circle-1 span:nth-child(3) { -webkit-filter: blur(15px); filter: blur(15px); }
 
-.circle-1 span:nth-child(4) { -webkit-filter: blur(75px); filter: blur(75px); }
+.circle-1 span:nth-child(4) { -webkit-filter: blur(75px); filter: blur(60px); }
 
 .circle-2 { position: absolute; inset: var(--circle-2-radius-inset); width: calc(100% - var(--circle-2-radius-delta)); height: calc(100% - var(--circle-2-radius-delta)); border-radius: 50%; border: 10px solid #69f1f1; -webkit-box-shadow: 0 0 30px 30px rgba(105, 241, 241, 0.2); box-shadow: 0 0 30px 30px rgba(105, 241, 241, 0.2); z-index: 9; -webkit-animation: rotate-left 4s linear infinite; animation: rotate-left 4s linear infinite; }
 

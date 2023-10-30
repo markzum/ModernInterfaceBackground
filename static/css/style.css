@@ -1,0 +1,161 @@
+@font-face {
+	font-family: 'Disket Mono'; 
+	src: url(/static/fonts/Disket-Mono-Regular.ttf); 
+}
+
+@font-face {
+	font-family: 'Disket Mono bold'; 
+	src: url(/static/fonts/Disket-Mono-Bold.ttf); 
+}
+
+
+:root {
+    --color-1: rgb(37, 150, 190);
+    --color-2: rgb(48, 169, 199);
+}
+
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #010d18;
+    margin: 0;
+    font-family: 'Disket Mono';
+}
+
+
+.datetime-container {
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    height: 20rem;
+    width: 20rem;
+}
+
+.current-datetime {
+    height: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+}
+
+.current-time {
+    font-family: 'Disket Mono bold';
+    font-size: 2rem;
+}
+
+.current-date {
+    font-size: 1.5rem;
+}
+
+
+/* System status */
+.system-status {
+    position: absolute;
+    top: 4rem;
+    right: 6rem;
+    color: white;
+    font-size: 1.3rem;
+    border-right: 3px var(--color-1) solid;
+    border-left: 3px var(--color-1) solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 9.1rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.system-status > div {
+    width: min-content;
+    white-space: nowrap;
+}
+
+/* Line 1 */
+.system-status::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 2px;
+    left: calc(-10rem - 2px);
+    background-color: var(--color-2);
+}
+
+/* Line 2 */
+.system-status::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 2px;
+    left: calc(-23rem);
+    top: 7.6rem;
+    background-color: var(--color-2);
+    transform: rotate(-45deg);
+}
+
+/* Circle 1 */
+.system-status-arrow::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-2);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: 2.25rem;
+    left: calc(-10rem - 4px);
+}
+
+/* Circle 2 */
+.system-status-arrow::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-2);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: calc(2.25rem + 10.8rem);
+    left: calc(-10rem - 4px - 10.85rem);
+}
+
+
+/* Files container */
+.files-container {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    color: white;
+    font-size: 1.3rem;
+    border: 2px var(--color-1) dashed;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 23rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.files-container .files-title {
+    position: relative;
+    top: -3rem;
+}
