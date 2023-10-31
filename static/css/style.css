@@ -30,6 +30,7 @@ body {
     background-color: #010d18;
     margin: 0;
     font-family: 'Disket Mono';
+    color: white;
 }
 
 
@@ -66,7 +67,6 @@ body {
     position: absolute;
     top: 4rem;
     right: 6rem;
-    color: white;
     font-size: 1.3rem;
     border-right: 3px var(--color-1) solid;
     border-left: 3px var(--color-1) solid;
@@ -143,7 +143,6 @@ body {
     position: absolute;
     top: 6rem;
     left: 4rem;
-    color: white;
     font-size: 1.3rem;
     border: 2px var(--color-1) dashed;
     padding: 1rem;
@@ -158,4 +157,58 @@ body {
 .files-container .files-title {
     position: relative;
     top: -3rem;
+}
+
+
+/* Weather */
+.weather {
+    position: absolute;
+    bottom: 12rem;
+    left: 20rem;
+    width: 1rem;
+    height: 1rem;
+    /*border: 2px green solid;*/
+}
+
+.weather .temperature {
+    position: absolute;
+    bottom: 5rem;
+    border: 3px var(--color-1) solid;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.weather .description {
+    position: absolute;
+    bottom: 1rem;
+    left: -7.3rem;
+    border-top: 2px var(--color-1) solid;
+    width: 9rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    text-align: right;
+    padding: 0.5rem 0.7rem;
+}
+
+.weather .icon {
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+    border: 6px var(--color-1) double;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather .icon img {
+    width: 4rem;
+    filter: drop-shadow(0 0 15px var(--color-2));
 }

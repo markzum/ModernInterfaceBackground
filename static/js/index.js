@@ -27,10 +27,6 @@ function getCurrentSystemStatus() {
   $.ajax({
     url: "http://127.0.0.1:6789/system-status", //http://127.0.0.1:6789/system-status
     type: "GET",
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": "true"
-    },
     success: function (data) {
       $("#cpu-status").text(data.cpu)
       $("#ram-status").text(data.virtual_memory)
@@ -41,3 +37,22 @@ function getCurrentSystemStatus() {
 
 setInterval(getCurrentSystemStatus, 6000)
 getCurrentSystemStatus()
+
+
+
+function getCurrentWeather() {
+  $.ajax({
+    url: "http://127.0.0.1:6789/weather",
+    type: "GET",
+    success: function (data) {
+      console.log(data);
+      $("#weatherTemperature").text(Math.round(data.main.temp)+"°")
+      $("#weatherDescription").text(data.weather[0].description)
+      $("#weatherIcon").attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
+    }
+  })
+}
+
+
+setInterval(getCurrentWeather, 0.5 * 60 * 60 * 1000)
+getCurrentWeather()
