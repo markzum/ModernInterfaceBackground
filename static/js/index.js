@@ -46,13 +46,40 @@ function getCurrentWeather() {
     type: "GET",
     success: function (data) {
       console.log(data);
-      $("#weatherTemperature").text(Math.round(data.main.temp)+"°")
-      $("#weatherDescription").text(data.weather[0].description)
-      $("#weatherIcon").attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
+      $("#weatherTemperature").text(Math.round(data["temperature"])+"°")
+      $("#weatherDescription").text(data["description"])
+      $("#weatherIcon").attr('src', data["icon_url"])
+    },
+    error: function () {
+      getCurrentWeather()
     }
   })
 }
 
 
+
 setInterval(getCurrentWeather, 0.5 * 60 * 60 * 1000)
 getCurrentWeather()
+
+
+function getInternetSpeed() {
+  $.ajax({
+    url: "http://127.0.0.1:6789/internet-speed",
+    type: "GET",
+    success: function (data) {
+      console.log(data);
+      $("#downloadResult").text(`↓ ${data["download"]}`)
+      $("#uploadResult").text(`↑ ${data["upload"]}`)
+      
+      $("#downloadIndicator").css("height", `calc(var(--division-size)*${data["download_b"]*100/104857600})`)
+      $("#uploadIndicator").css("height", `calc(var(--division-size)*${data["upload_b"]*100/104857600})`)
+    },
+    error: function () {
+      getInternetSpeed()
+    }
+  })
+}
+
+
+setInterval(getInternetSpeed, 10 * 60 * 1000)
+getInternetSpeed()

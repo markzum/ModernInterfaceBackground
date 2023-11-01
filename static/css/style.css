@@ -12,6 +12,8 @@
 :root {
     --color-1: rgb(37, 150, 190);
     --color-2: rgb(48, 169, 199);
+    --color-3: rgb(30, 135, 161);
+    --color-4: rgb(23, 108, 129);
 }
 
 
@@ -163,8 +165,8 @@ body {
 /* Weather */
 .weather {
     position: absolute;
-    bottom: 12rem;
-    left: 20rem;
+    bottom: 10rem;
+    left: 28rem;
     width: 1rem;
     height: 1rem;
     /*border: 2px green solid;*/
@@ -211,4 +213,85 @@ body {
 .weather .icon img {
     width: 4rem;
     filter: drop-shadow(0 0 15px var(--color-2));
+}
+
+
+/* Internet speed */
+.internet-speed {
+    position: absolute;
+    bottom: 10rem;
+    left: 4rem;
+    display: flex;
+
+    --division-size: 2.5px;
+}
+
+.internet-speed .download, 
+.internet-speed .upload {
+    width: 3rem;
+    height: calc(var(--division-size) * 100);
+    border: 2px var(--color-3) solid;
+    border-radius: 0.3rem;
+}
+
+.internet-speed .download > span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    left: -0.5rem;
+}
+
+.internet-speed .download .section,
+.internet-speed .upload .section {
+    position: relative;
+    width: 3rem;
+    height: calc(var(--division-size) * 25);
+    border-top: 2px var(--color-3) solid;
+    z-index: 2;
+}
+
+.internet-speed .download .top-section,
+.internet-speed .upload .top-section {
+    border-top: none;
+}
+
+.internet-speed .section span{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%) translateX(-100%);
+    left: -0.5rem;
+}
+
+.internet-speed .download .last-section span,
+.internet-speed .upload .last-section span {
+    transform: translateX(-100%);
+}
+
+.internet-speed .indicator {
+    width: 3rem;
+    height: calc(var(--division-size)*70);
+    background: linear-gradient(var(--color-2), var(--color-1));
+    position: absolute;
+    bottom: 1px;
+    border-radius: 0.2rem;
+}
+
+.internet-speed .upload {
+    margin-left: 4rem;
+}
+
+.internet-speed .upload > span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    left: 6.70rem;
+}
+
+.internet-speed .download .result,
+.internet-speed .upload .result {
+    position: relative;
+    top: 1rem;
+    width: 5rem;
+    transform: translateX(-25%);
+    text-align: center;
 }

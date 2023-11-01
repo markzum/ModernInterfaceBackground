@@ -60,9 +60,33 @@
     </div>
 
     <div class="weather">
-        <div class="temperature" id="weatherTemperature">+25°</div>
-        <div class="description" id="weatherDescription">длительный сильный дождь</div>
-        <div class="icon"><img src="https://openweathermap.org/img/wn/02n@2x.png" id="weatherIcon"></div>
+        <div class="temperature" id="weatherTemperature">-°</div>
+        <div class="description" id="weatherDescription">Загрузка...</div>
+        <div class="icon"><img src="https://openweathermap.org/img/wn/02d@2x.png" id="weatherIcon"></div>
+    </div>
+
+    <div class="internet-speed">
+        <div class="download">
+            <span>100</span>
+            <div class="section top-section"><span>75</span></div>
+            <div class="section"><span>50</span></div>
+            <div class="section"><span>25</span></div>
+            <div class="section last-section"><span>0</span></div>
+            
+            <div class="indicator" id="downloadIndicator"></div>
+            <div class="result" id="downloadResult">Измерение</div>
+        </div>
+
+        <div class="upload">
+            <span>100</span>
+            <div class="section top-section"><span>75</span></div>
+            <div class="section"><span>50</span></div>
+            <div class="section"><span>25</span></div>
+            <div class="section last-section"><span>0</span></div>
+            
+            <div class="indicator" id="uploadIndicator"></div>
+            <div class="result" id="uploadResult">Измерение</div>
+        </div>
     </div>
 
     <script src="js/index.js"></script>
